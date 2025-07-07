@@ -1,0 +1,192 @@
+/* ProcessSection.css */
+.process-section {
+  padding: 100px 0;
+  background-color: #f8fafc;
+  width: 100%;
+}
+
+.process-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.process-header {
+  text-align: center;
+  margin-bottom: 80px;
+}
+
+.process-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #1e3a8a;
+  margin-bottom: 1rem;
+  line-height: 1.2;
+}
+
+.process-subtitle {
+  font-size: 1.125rem;
+  color: #64748b;
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+.process-steps {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 3rem;
+  margin-top: 60px;
+}
+
+.process-step {
+  text-align: center;
+  position: relative;
+}
+
+.step-number {
+  width: 80px;
+  height: 80px;
+  background: linear-gradient(135deg, #3b82f6, #1e3a8a);
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  font-weight: 700;
+  margin: 0 auto 2rem;
+  box-shadow: 0 10px 25px rgba(59, 130, 246, 0.3);
+  transition: all 0.3s ease;
+}
+
+.process-step:hover .step-number {
+  transform: scale(1.1);
+  box-shadow: 0 15px 35px rgba(59, 130, 246, 0.4);
+}
+
+.step-content {
+  max-width: 280px;
+  margin: 0 auto;
+}
+
+.step-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #1e3a8a;
+  margin-bottom: 1rem;
+  line-height: 1.3;
+}
+
+.step-description {
+  font-size: 1rem;
+  color: #64748b;
+  line-height: 1.6;
+}
+
+/* Step connectors for larger screens */
+@media (min-width: 1024px) {
+  .process-steps {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+    position: relative;
+  }
+
+  .process-step:not(:last-child)::after {
+    content: "";
+    position: absolute;
+    top: 40px;
+    right: -1rem;
+    width: 2rem;
+    height: 2px;
+    background: linear-gradient(90deg, #3b82f6, #60a5fa);
+    z-index: 1;
+  }
+
+  .process-step:hover::after {
+    background: linear-gradient(90deg, #1e3a8a, #3b82f6);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .process-steps {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2.5rem;
+  }
+
+  .process-title {
+    font-size: 2.25rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .process-section {
+    padding: 80px 0;
+  }
+
+  .process-container {
+    padding: 0 1rem;
+  }
+
+  .process-header {
+    margin-bottom: 60px;
+  }
+
+  .process-title {
+    font-size: 2rem;
+  }
+
+  .process-subtitle {
+    font-size: 1rem;
+  }
+
+  .process-steps {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    margin-top: 40px;
+  }
+
+  .step-number {
+    width: 70px;
+    height: 70px;
+    font-size: 1.75rem;
+  }
+
+  .step-title {
+    font-size: 1.25rem;
+  }
+
+  .step-description {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .process-section {
+    padding: 60px 0;
+  }
+
+  .process-title {
+    font-size: 1.75rem;
+  }
+
+  .step-number {
+    width: 60px;
+    height: 60px;
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .step-content {
+    max-width: 100%;
+  }
+
+  .step-title {
+    font-size: 1.1rem;
+  }
+
+  .step-description {
+    font-size: 0.85rem;
+  }
+}

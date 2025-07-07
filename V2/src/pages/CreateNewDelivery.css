@@ -1,0 +1,238 @@
+/* Delivery Header Section */
+.Delivery-header {
+  background: #f3f4f6;
+  padding: 24px 20px 0px 20px;
+  margin-top: 170px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  max-width: 1400px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.Delivery-header-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.Delivery-header h1 {
+  color: #1e3a8a;
+  font-size: 32px;
+  font-weight: 600;
+  margin: 0 0 8px 0;
+}
+
+.Delivery-header p {
+  color: #6b7280;
+  font-size: 16px;
+  margin: 0;
+}
+
+.Delivery-actions {
+  display: flex;
+  gap: 12px;
+}
+
+.Delivery-actions button {
+  padding: 12px 24px;
+  border: none;
+  border-radius: 8px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 14px;
+}
+
+.Delivery-actions button:first-child {
+  background-color: #6b7280;
+  color: white;
+}
+
+.Delivery-actions button:first-child:hover {
+  background-color: #4b5563;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(107, 114, 128, 0.2);
+}
+
+.Delivery-actions button:last-child {
+  background-color: #2563eb;
+  color: white;
+}
+
+.Delivery-actions button:last-child:hover {
+  background-color: #1d4ed8;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(37, 99, 235, 0.2);
+}
+
+/* Main Dashboard */
+.create-new-delivery-dashboard {
+  padding: 20px;
+  background-color: #f3f4f6;
+  min-height: calc(100vh - 270px);
+  margin-top: 0px;
+}
+
+.create-new-delivery-content {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 20px;
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  background-color: #f3f4f6;
+}
+
+.left-column {
+  display: flex;
+  flex-direction: column;
+  gap: 0px;
+}
+
+.right-column {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Pro Tips Section */
+#ProTips {
+  background: white;
+  border-radius: 12px;
+  padding: 24px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  border-left: 4px solid #2563eb;
+}
+
+.tips-icon {
+  font-size: 24px;
+  margin-bottom: 12px;
+}
+
+#ProTips h3 {
+  color: #1e3a8a;
+  font-size: 18px;
+  font-weight: 600;
+  margin: 0 0 16px 0;
+}
+
+#ProTips ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 16px 0;
+}
+
+#ProTips li {
+  color: #6b7280;
+  font-size: 14px;
+  margin-bottom: 8px;
+  position: relative;
+  padding-left: 20px;
+}
+
+#ProTips li:before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: #10b981;
+  font-weight: bold;
+}
+
+#ProTips li:last-child {
+  margin-bottom: 0;
+}
+
+#ProTips a {
+  color: #2563eb;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+#ProTips a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .create-new-delivery-content {
+    grid-template-columns: 1fr;
+  }
+
+  .Delivery-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+    margin-top: 150px;
+  }
+
+  .Delivery-actions {
+    align-self: stretch;
+  }
+
+  .Delivery-actions button {
+    flex: 1;
+  }
+}
+
+@media (max-width: 768px) {
+  .create-new-delivery-dashboard {
+    padding: 10px;
+  }
+
+  .create-new-delivery-content {
+    gap: 15px;
+  }
+
+  .Delivery-header {
+    padding: 16px;
+    margin-top: 130px;
+  }
+
+  .Delivery-header h1 {
+    font-size: 28px;
+  }
+
+  .Delivery-actions button {
+    padding: 10px 20px;
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 480px) {
+  .create-new-delivery-dashboard {
+    padding: 10px;
+  }
+
+  .create-new-delivery-content {
+    gap: 10px;
+  }
+
+  .Delivery-header {
+    padding: 12px;
+    margin-top: 120px;
+  }
+
+  .Delivery-header h1 {
+    font-size: 24px;
+  }
+
+  .Delivery-header p {
+    font-size: 14px;
+  }
+
+  .Delivery-actions {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .Delivery-actions button {
+    padding: 10px 16px;
+    font-size: 13px;
+  }
+
+  #ProTips {
+    padding: 20px;
+  }
+}

@@ -1,0 +1,322 @@
+/* Reports.css */
+.delivery-analytics-container {
+    min-height: 100vh;
+    background-color: #f3f4f6;
+    position: relative;
+    z-index: 1;
+}
+
+.delivery-analytics-header {
+    background: #f3f4f6;
+    padding: 24px 20px;
+    margin-top: 170px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    max-width: 1400px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.delivery-analytics-header-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.delivery-analytics-header h1 {
+    color: #1e3a8a;
+    font-size: 32px;
+    font-weight: 600;
+    margin: 0 0 8px 0;
+}
+
+.delivery-analytics-header p {
+    color: #6b7280;
+    font-size: 16px;
+    margin: 0;
+}
+
+.delivery-analytics-actions {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+}
+
+.time-filter {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: white;
+    padding: 10px 16px;
+    border-radius: 8px;
+    border: 1px solid #d1d5db;
+    cursor: pointer;
+    font-size: 14px;
+    color: #374151;
+}
+
+.time-filter:hover {
+    background: #f9fafb;
+}
+
+.filter-btn,
+.generate-btn {
+    padding: 12px 24px;
+    border: none;
+    border-radius: 8px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 14px;
+}
+
+.filter-btn {
+    background-color: #e5e7eb;
+    color: #374151;
+    border: 1px solid #d1d5db;
+}
+
+.filter-btn:hover {
+    background-color: #d1d5db;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(107, 114, 128, 0.2);
+}
+
+.generate-btn {
+    background-color: #2563eb;
+    color: white;
+}
+
+.generate-btn:hover {
+    background-color: #1d4ed8;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(37, 99, 235, 0.2);
+}
+
+.reports-content {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    position: relative;
+    z-index: 1;
+    background: transparent;
+}
+
+.analytics-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.chart-section,
+.map-section,
+.status-section {
+    min-height: 300px;
+}
+
+.map-section {
+    grid-column: 1 / -1;
+}
+
+.recent-section,
+.vendor-section {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.recent-section {
+    min-height: 450px;
+}
+
+.vendor-section {
+    min-height: 450px;
+}
+
+/* Three-column grid for TopPerformingRoutes, DeliveryIssues, and RecentOrders */
+.analytics-grid:nth-child(4) {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+}
+
+.routes-section,
+.issues-section,
+.recent-section {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.vendor-performance-section {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+}
+
+/* Fix for overlay issues */
+.analytics-grid,
+.chart-section,
+.map-section,
+.status-section,
+.routes-section,
+.issues-section,
+.recent-section,
+.vendor-performance-section {
+    position: relative;
+    z-index: 2;
+}
+
+/* Ensure all components are above any potential overlays */
+.analytics-grid > * {
+    position: relative;
+    z-index: 3;
+}
+
+/* Reports Action Buttons */
+.reports-action-buttons {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+    margin-top: 32px;
+    padding: 24px 0;
+}
+
+.reports-action-btn {
+    padding: 12px 32px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    border: 1px solid;
+    min-width: 180px;
+    text-align: center;
+}
+
+.reports-action-btn.secondary {
+    background: white;
+    color: #374151;
+    border-color: #d1d5db;
+}
+
+.reports-action-btn.secondary:hover {
+    background: #f9fafb;
+    border-color: #9ca3af;
+    transform: translateY(-1px);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.reports-action-btn.primary {
+    background: #3b82f6;
+    color: white;
+    border-color: #3b82f6;
+}
+
+.reports-action-btn.primary:hover {
+    background: #2563eb;
+    border-color: #2563eb;
+    transform: translateY(-1px);
+    box-shadow: 0 2px 12px rgba(59, 130, 246, 0.3);
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .delivery-analytics-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 16px;
+        margin-top: 150px;
+    }
+
+    .delivery-analytics-actions {
+        align-self: stretch;
+        flex-wrap: wrap;
+    }
+
+    .analytics-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .map-section {
+        grid-column: 1;
+    }
+}
+
+@media (max-width: 768px) {
+        .reports-content {
+            padding: 15px;
+        }
+
+        .delivery-analytics-header {
+            padding: 16px 15px;
+            margin-top: 130px;
+        }
+
+        .delivery-analytics-header h1 {
+            font-size: 28px;
+        }
+
+        .delivery-analytics-actions {
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .filter-btn,
+        .generate-btn,
+        .time-filter {
+            flex: 1;
+            text-align: center;
+            justify-content: center;
+        }
+
+        /* Responsive behavior for three-column layout */
+        .analytics-grid:nth-child(4) {
+            grid-template-columns: 1fr;
+        }
+
+        /* Responsive styles for action buttons */
+        .reports-action-buttons {
+            flex-direction: column;
+            gap: 12px;
+            margin-top: 24px;
+        }
+
+        .reports-action-btn {
+            min-width: auto;
+            width: 100%;
+        }
+}
+
+@media (max-width: 480px) {
+    .reports-content {
+        padding: 10px;
+    }
+
+    .delivery-analytics-header {
+        padding: 12px 10px;
+        margin-top: 120px;
+    }
+
+    .delivery-analytics-header h1 {
+        font-size: 24px;
+    }
+
+    .delivery-analytics-header p {
+        font-size: 14px;
+    }
+
+    .reports-action-buttons {
+        padding: 16px;
+    }
+}

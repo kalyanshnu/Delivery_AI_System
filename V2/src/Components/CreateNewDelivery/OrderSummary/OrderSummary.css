@@ -1,0 +1,134 @@
+.order-summary {
+  background: white;
+  border-radius: 12px;
+  padding: 24px;
+  margin-bottom: 20px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  height: fit-content;
+}
+
+.order-summary h2 {
+  color: #1e3a8a;
+  font-size: 20px;
+  font-weight: 600;
+  margin: 0 0 20px 0;
+}
+
+.summary-section {
+  margin-bottom: 24px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #f3f4f6;
+}
+
+.summary-row,
+.cost-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.summary-row:last-child,
+.cost-row:last-child {
+  margin-bottom: 0;
+}
+
+.summary-row .label,
+.cost-row .label {
+  color: #6b7280;
+  font-size: 14px;
+}
+
+.summary-row .value,
+.cost-row .value {
+  color: #374151;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.cost-breakdown {
+  margin-bottom: 24px;
+  padding-bottom: 16px;
+  border-bottom: 2px solid #f3f4f6;
+}
+
+.cost-row.total {
+  margin-top: 16px;
+  padding-top: 16px;
+  border-top: 1px solid #e5e7eb;
+}
+
+.cost-row.total .label {
+  color: #374151;
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.cost-row.total .value {
+  color: #1e3a8a;
+  font-weight: 700;
+  font-size: 18px;
+}
+
+.create-order-btn {
+  width: 100%;
+  padding: 14px 20px;
+  background: #2563eb;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.create-order-btn:hover {
+  background: #1d4ed8;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
+}
+
+.create-order-btn:active {
+  transform: translateY(0);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .order-summary {
+    padding: 20px;
+  }
+
+  .create-order-btn {
+    padding: 12px 20px;
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .order-summary {
+    padding: 16px;
+  }
+
+  .order-summary h2 {
+    font-size: 18px;
+  }
+
+  .summary-row .label,
+  .cost-row .label {
+    font-size: 13px;
+  }
+
+  .summary-row .value,
+  .cost-row .value {
+    font-size: 13px;
+  }
+
+  .cost-row.total .label {
+    font-size: 15px;
+  }
+
+  .cost-row.total .value {
+    font-size: 16px;
+  }
+}

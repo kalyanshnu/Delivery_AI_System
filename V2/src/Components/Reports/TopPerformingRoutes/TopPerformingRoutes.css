@@ -1,0 +1,228 @@
+.top-performing-routes {
+  background: white;
+    border-radius: 12px;
+    padding: 24px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    border: 1px solid #e5e7eb;
+    position: relative;
+    z-index: 10;
+    isolation: isolate;
+    overflow: hidden;
+}
+
+.top-performing-routes::before,
+.top-performing-routes::after {
+    display: none !important;
+}
+
+/* Ensure all child elements are properly positioned */
+.routes-header,
+.routes-list,
+.route-item {
+    position: relative;
+    z-index: 11;
+    background: transparent;
+}
+
+/* Override any global pseudo-element styles */
+.route-item::before,
+.route-item::after,
+.routes-header::before,
+.routes-header::after {
+    display: none !important;
+}
+
+.routes-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+}
+
+.routes-header h3 {
+    font-size: 18px;
+    font-weight: 600;
+    color: #1f2937;
+    margin: 0;
+}
+
+.view-all-btn {
+    padding: 8px 16px;
+    background: #3b82f6;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.view-all-btn:hover {
+    background: #2563eb;
+}
+
+.routes-list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.route-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px;
+    background: #f8fafc;
+    border-radius: 8px;
+    border: 1px solid #e2e8f0;
+    transition: all 0.2s ease;
+}
+
+.route-item:hover {
+    background: #f1f5f9;
+    transform: translateY(-1px);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.route-info h4 {
+    font-size: 16px;
+    font-weight: 600;
+    color: #1f2937;
+    margin: 0 0 4px 0;
+}
+
+.route-info p {
+    font-size: 14px;
+    color: #6b7280;
+    margin: 0;
+}
+
+.route-metrics {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    align-items: flex-end;
+}
+
+.metric {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+
+.metric-label {
+    font-size: 12px;
+    color: #6b7280;
+}
+
+.metric-value {
+    font-size: 12px;
+    font-weight: 600;
+    color: #374151;
+}
+
+.metric-value.success {
+    color: #10b981;
+}
+
+.route-status {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    font-size: 16px;
+}
+
+.route-status.on-time {
+    background: #dcfce7;
+    color: #16a34a;
+}
+
+.route-status.delayed {
+    background: #fef3c7;
+    color: #d97706;
+}
+
+/* Additional fixes for text visibility and overlay issues */
+.top-performing-routes * {
+    position: relative;
+    z-index: 12;
+}
+
+.top-performing-routes h3,
+.top-performing-routes h4,
+.top-performing-routes p,
+.top-performing-routes span,
+.top-performing-routes button {
+    color: inherit !important;
+    background: transparent !important;
+    text-shadow: none !important;
+}
+
+.routes-header h3 {
+    color: #1f2937 !important;
+}
+
+.view-all-btn {
+    background: #3b82f6 !important;
+    color: white !important;
+}
+
+.route-info h4 {
+    color: #1f2937 !important;
+}
+
+.route-info p {
+    color: #6b7280 !important;
+}
+
+.metric-label {
+    color: #6b7280 !important;
+}
+
+.metric-value {
+    color: #374151 !important;
+}
+
+.metric-value.success {
+    color: #10b981 !important;
+}
+
+/* Force background to be white */
+.top-performing-routes {
+    background: white !important;
+}
+
+.route-item {
+    background: #f8fafc !important;
+}
+
+@media (max-width: 768px) {
+    .route-item {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+    }
+
+    .route-metrics {
+        align-items: flex-start;
+        align-self: stretch;
+    }
+
+    .route-status {
+        align-self: flex-end;
+    }
+
+    .routes-header {
+        flex-direction: column;
+        gap: 12px;
+        align-items: flex-start;
+    }
+
+    .view-all-btn {
+        align-self: stretch;
+        text-align: center;
+    }
+}

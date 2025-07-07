@@ -1,0 +1,150 @@
+.vendor-performance-comparison {
+    background: white;
+    border-radius: 12px;
+    padding: 24px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    border: 1px solid #e5e7eb;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.comparison-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+.comparison-header h3 {
+    font-size: 18px;
+    font-weight: 600;
+    color: #1f2937;
+    margin: 0;
+}
+
+.legend {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    flex-wrap: wrap;
+}
+
+.legend-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.legend-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+}
+
+.legend-dot.your-performance {
+    background: #3b82f6;
+}
+
+.legend-dot.industry-average {
+    background: #e5e7eb;
+}
+
+.legend-item span {
+    font-size: 14px;
+    color: #374151;
+}
+
+.view-dashboard-btn {
+    padding: 8px 16px;
+    background: #3b82f6;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.view-dashboard-btn:hover {
+    background: #2563eb;
+}
+
+.metrics-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+    margin-bottom: 32px;
+    flex: 1;
+}
+
+.metric-card {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.metric-title {
+    font-size: 16px;
+    font-weight: 600;
+    color: #1f2937;
+    text-align: center;
+}
+
+.metric-content {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.performance-bar {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.bar-label {
+    font-size: 12px;
+    color: #6b7280;
+    font-weight: 500;
+}
+
+.bar-track {
+    height: 8px;
+    background: #f3f4f6;
+    border-radius: 4px;
+    overflow: hidden;
+    position: relative;
+}
+
+.bar-fill {
+    height: 100%;
+    border-radius: 4px;
+    transition: width 1s ease-out;
+}
+
+.bar-fill.your-performance {
+    background: #3b82f6;
+}
+
+.bar-fill.industry-average {
+    background: #e5e7eb;
+}
+
+@media (max-width: 768px) {
+    .metrics-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .comparison-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .legend {
+        justify-content: space-between;
+        width: 100%;
+    }
+}

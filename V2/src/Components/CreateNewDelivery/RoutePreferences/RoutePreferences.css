@@ -1,0 +1,200 @@
+.route-preferences {
+    background: white;
+    border-radius: 12px;
+    padding: 24px;
+    margin-bottom: 20px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.route-preferences h2 {
+    color: #1e3a8a;
+    font-size: 20px;
+    font-weight: 600;
+    margin: 0 0 20px 0;
+}
+
+.route-selection {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+}
+
+.route-type-section h3,
+.route-preview-section h3 {
+    color: #374151;
+    font-size: 16px;
+    font-weight: 500;
+    margin: 0 0 16px 0;
+}
+
+.route-options {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 24px;
+}
+
+.route-option,
+.checkbox-option {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    color: #374151;
+    cursor: pointer;
+    position: relative;
+}
+
+.route-option input[type="radio"],
+.checkbox-option input[type="checkbox"] {
+    opacity: 0;
+    position: absolute;
+}
+
+.radio-custom,
+.checkbox-custom {
+    width: 16px;
+    height: 16px;
+    border: 2px solid #d1d5db;
+    margin-right: 8px;
+    display: inline-block;
+    position: relative;
+    transition: all 0.2s ease;
+}
+
+.radio-custom {
+    border-radius: 50%;
+}
+
+.checkbox-custom {
+    border-radius: 4px;
+}
+
+.route-option input[type="radio"]:checked + .radio-custom {
+    border-color: #2563eb;
+    background: #2563eb;
+}
+
+.route-option input[type="radio"]:checked + .radio-custom::after {
+    content: "";
+    width: 6px;
+    height: 6px;
+    background: white;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.checkbox-option input[type="checkbox"]:checked + .checkbox-custom {
+    border-color: #2563eb;
+    background: #2563eb;
+}
+
+.checkbox-option input[type="checkbox"]:checked + .checkbox-custom::after {
+    content: "✓";
+    color: white;
+    font-size: 12px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.additional-preferences h4 {
+    color: #374151;
+    font-size: 14px;
+    font-weight: 500;
+    margin: 0 0 12px 0;
+}
+
+.preference-checkboxes {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.map-preview {
+    position: relative;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    overflow: hidden;
+    margin-bottom: 16px;
+    height: 200px;
+}
+
+.map-preview img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.route-info {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.route-points {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 12px;
+    border-radius: 8px;
+    font-size: 12px;
+}
+
+.point {
+    margin-bottom: 4px;
+    color: #374151;
+}
+
+.point:last-child {
+    margin-bottom: 0;
+}
+
+.route-stats {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.route-stats p {
+    font-size: 14px;
+    color: #6b7280;
+    margin: 0;
+}
+
+.view-full-btn {
+    padding: 6px 12px;
+    border: 1px solid #2563eb;
+    border-radius: 6px;
+    background: white;
+    color: #2563eb;
+    font-size: 12px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.view-full-btn:hover {
+    background: #2563eb;
+    color: white;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .route-selection {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .route-stats {
+        flex-direction: column;
+        gap: 8px;
+        align-items: flex-start;
+    }
+}

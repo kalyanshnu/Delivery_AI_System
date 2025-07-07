@@ -1,0 +1,321 @@
+/* Register.css */
+.register-container {
+  display: flex;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+}
+
+.register-container .left-section {
+  flex: 1;
+  background: linear-gradient(135deg, #f0f4f8 0%, #e2e8f0 100%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.register-container .truck-illustration {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  z-index: 2;
+  text-align: center;
+}
+
+.register-container .truck-image {
+  width: 350px;
+  height: auto;
+  object-fit: contain;
+  filter: drop-shadow(0 10px 30px rgba(0, 0, 0, 0.1));
+}
+
+.register-container .illustration-text h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #1f2937;
+  margin: 0 0 1rem 0;
+}
+
+.register-container .illustration-text p {
+  font-size: 1.125rem;
+  color: #6b7280;
+  margin: 0;
+}
+
+.register-container .right-section {
+  flex: 1;
+  background: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  overflow-y: auto;
+}
+
+.register-form {
+  width: 100%;
+  max-width: 480px;
+  padding: 2rem;
+}
+
+.register-container .logo-section {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 2rem;
+}
+
+.register-container .logo-icon {
+  font-size: 2rem;
+  background: #2563eb;
+  padding: 0.5rem;
+  border-radius: 8px;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.register-container .logo-text {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #2563eb;
+}
+
+.register-container .welcome-text {
+  margin-bottom: 2rem;
+}
+
+.register-container .welcome-text h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #1f2937;
+  margin: 0 0 0.5rem 0;
+}
+
+.register-container .welcome-text p {
+  font-size: 1rem;
+  color: #6b7280;
+  margin: 0;
+}
+
+.form-row {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-group.half {
+  flex: 1;
+  margin-bottom: 0;
+}
+
+.register-container .form-group label {
+  display: block;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #374151;
+  margin-bottom: 0.5rem;
+}
+
+.register-container .form-group input,
+.register-container .form-group select {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: all 0.2s ease;
+  box-sizing: border-box;
+}
+
+.register-container .form-group input:focus,
+.register-container .form-group select:focus {
+  outline: none;
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+.register-container .form-group input::placeholder {
+  color: #9ca3af;
+}
+
+.register-container .form-group select {
+  cursor: pointer;
+  background-color: white;
+}
+
+.terms-agreement {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  margin-bottom: 1.5rem;
+  padding: 1rem;
+  background: #f8fafc;
+  border-radius: 8px;
+  border: 1px solid #e2e8f0;
+}
+
+.terms-agreement input[type="checkbox"] {
+  width: 1rem;
+  height: 1rem;
+  accent-color: #3b82f6;
+  margin-top: 0.125rem;
+  flex-shrink: 0;
+}
+
+.terms-agreement label {
+  font-size: 0.875rem;
+  color: #374151;
+  line-height: 1.5;
+  cursor: pointer;
+}
+
+.terms-agreement a {
+  color: #3b82f6;
+  text-decoration: none;
+}
+
+.terms-agreement a:hover {
+  text-decoration: underline;
+}
+
+.register-btn {
+  width: 100%;
+  padding: 0.875rem;
+  background: #3b82f6;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  margin-bottom: 1.5rem;
+}
+
+.register-btn:hover {
+  background: #2563eb;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
+}
+
+.login-link {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.login-link span {
+  color: #6b7280;
+  margin-right: 0.5rem;
+}
+
+.login-link a {
+  color: #3b82f6;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.login-link a:hover {
+  text-decoration: underline;
+}
+
+.register-container .footer-text {
+  text-align: center;
+  color: #9ca3af;
+  font-size: 0.75rem;
+  line-height: 1.5;
+}
+
+.register-container .footer-text p {
+  margin: 0.25rem 0;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .register-container .truck-image {
+    width: 300px;
+  }
+
+  .register-container .illustration-text h2 {
+    font-size: 1.75rem;
+  }
+
+  .register-container .illustration-text p {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .register-container {
+    flex-direction: column;
+  }
+
+  .register-container .left-section {
+    min-height: 35vh;
+    padding: 1.5rem;
+  }
+
+  .register-container .truck-image {
+    width: 250px;
+  }
+
+  .register-container .illustration-text h2 {
+    font-size: 1.5rem;
+  }
+
+  .register-container .right-section {
+    padding: 1rem;
+  }
+
+  .register-form {
+    padding: 1rem;
+  }
+
+  .register-container .welcome-text h1 {
+    font-size: 1.75rem;
+  }
+
+  .form-row {
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .form-group.half {
+    margin-bottom: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .register-container .left-section {
+    min-height: 30vh;
+    padding: 1rem;
+  }
+
+  .register-container .truck-image {
+    width: 200px;
+  }
+
+  .register-container .illustration-text h2 {
+    font-size: 1.25rem;
+  }
+
+  .register-container .illustration-text p {
+    font-size: 0.875rem;
+  }
+
+  .register-form {
+    padding: 0.5rem;
+  }
+}

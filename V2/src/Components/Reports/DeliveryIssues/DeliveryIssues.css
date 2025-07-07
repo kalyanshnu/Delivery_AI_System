@@ -1,0 +1,132 @@
+.delivery-issues {
+    background: white;
+    border-radius: 12px;
+    padding: 24px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    border: 1px solid #e5e7eb;
+}
+
+.issues-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+}
+
+.issues-header h3 {
+    font-size: 18px;
+    font-weight: 600;
+    color: #1f2937;
+    margin: 0;
+}
+
+.view-all-btn {
+    padding: 8px 16px;
+    background: #3b82f6;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.view-all-btn:hover {
+    background: #2563eb;
+}
+
+.issues-list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.issue-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 0;
+    border-bottom: 1px solid #f1f5f9;
+}
+
+.issue-item:last-child {
+    border-bottom: none;
+}
+
+.issue-info {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.issue-type {
+    font-size: 14px;
+    font-weight: 500;
+    color: #374151;
+}
+
+.issue-count {
+    font-size: 12px;
+    color: #6b7280;
+}
+
+.issue-progress {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex: 1;
+    max-width: 200px;
+}
+
+.progress-bar {
+    flex: 1;
+    height: 8px;
+    background: #e5e7eb;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.progress-fill {
+    height: 100%;
+    border-radius: 4px;
+    transition: width 1s ease-out;
+    animation: fillProgress 1.5s ease-out forwards;
+}
+
+.issue-percentage {
+    font-size: 12px;
+    font-weight: 600;
+    color: #374151;
+    min-width: 35px;
+    text-align: right;
+}
+
+@keyframes fillProgress {
+    from {
+        width: 0%;
+    }
+}
+
+@media (max-width: 768px) {
+    .issue-item {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+    }
+
+    .issue-progress {
+        align-self: stretch;
+        max-width: none;
+    }
+
+    .issues-header {
+        flex-direction: column;
+        gap: 12px;
+        align-items: flex-start;
+    }
+
+    .view-all-btn {
+        align-self: stretch;
+        text-align: center;
+    }
+}

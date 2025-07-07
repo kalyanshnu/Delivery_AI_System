@@ -1,0 +1,85 @@
+.delivery-metrics {
+    margin-bottom: 20px;
+}
+
+.metrics-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+.metric-card {
+    background: white;
+    border-radius: 12px;
+    padding: 24px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    border: 1px solid #e5e7eb;
+}
+
+.metric-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+}
+
+.metric-header h3 {
+    font-size: 14px;
+    font-weight: 500;
+    color: #6b7280;
+    margin: 0;
+}
+
+.metric-icon {
+    font-size: 20px;
+    opacity: 0.7;
+}
+
+.metric-value {
+    font-size: 32px;
+    font-weight: 700;
+    color: #1f2937;
+    margin-bottom: 8px;
+}
+
+.metric-change {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    font-size: 14px;
+}
+
+.metric-change.positive {
+    color: #10b981;
+}
+
+.metric-change.negative {
+    color: #ef4444;
+}
+
+.change-indicator {
+    font-size: 16px;
+}
+
+.change-value {
+    font-weight: 600;
+}
+
+.change-period {
+    color: #6b7280;
+}
+
+@media (max-width: 768px) {
+    .metrics-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    .metric-card {
+        padding: 20px;
+    }
+
+    .metric-value {
+        font-size: 28px;
+    }
+}
