@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "build:vercel": "npx --yes vite@^7.0.0 build",
+    "build:vercel": "npm install && npm run build",
     "lint": "eslint .",
     "preview": "vite preview",
     "postinstall": "echo 'Dependencies installed successfully'"
