@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "build:vercel": "npm install && npm run build",
+    "build:vercel": "rm -rf node_modules package-lock.json && npm install && npm run build",
     "lint": "eslint .",
     "preview": "vite preview",
     "postinstall": "echo 'Dependencies installed successfully'"
