@@ -1,6 +1,7 @@
 {
-  "buildCommand": "npm run build",
+  "buildCommand": "cd V2 && npm run build:vercel",
   "outputDirectory": "V2/dist",
+  "installCommand": "cd V2 && npm install",
   "rewrites": [
     {
       "source": "/(.*)",
