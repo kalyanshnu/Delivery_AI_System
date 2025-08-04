@@ -23,6 +23,8 @@ const App = () => {
           <Route path="/driver-dashboard" element={<DriverDashboard />} />
           <Route path="/admin-dashboard" element={<AdminDashboard />} />
           <Route path="/reports" element={<Reports />} />
+          {/* Catch-all route for 404 */}
+          <Route path="*" element={<SigninLogin />} />
         </Routes>
       </Router>
     </div>
