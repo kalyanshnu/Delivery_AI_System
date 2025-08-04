@@ -3,8 +3,7 @@
   "version": "1.0.0",
   "scripts": {
     "build": "cd V2 && npm install && npm run build",
-    "dev": "cd V2 && npm run dev",
-    "install": "cd V2 && npm install"
+    "dev": "cd V2 && npm run dev"
   },
   "workspaces": [
     "V2",
