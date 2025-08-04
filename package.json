@@ -8,5 +8,8 @@
   "workspaces": [
     "V2",
     "Backend"
-  ]
+  ],
+  "devDependencies": {
+    "parcel": "^2.15.4"
+  }
 }
