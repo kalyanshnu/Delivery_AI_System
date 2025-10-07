@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./AdminDashboard.css";
-import Header from "../Components/common/Header";
-import Footer from "../Components/common/FooterSection";
+import Header from "../Components/Common/Header";
+import Footer from "../Components/Common/FooterSection";
 import ProfileInformation from "../Components/AdminDashboard/ProfileInformation/ProfileInformation";
 import SecuritySettings from "../Components/AdminDashboard/SecuritySettings/SecuritySettings";
 import TeamManagement from "../Components/AdminDashboard/TeamManagement/TeamManagement";
