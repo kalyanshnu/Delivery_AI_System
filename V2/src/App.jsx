@@ -9,6 +9,14 @@ import AdminDashboard from "./pages/AdminDashboard";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import DriverDashboard from "./pages/DriverDashboard";
 
+// Simple 404 Not Found component
+const NotFound = () => (
+  <div style={{ textAlign: "center", marginTop: "2rem" }}>
+    <h2>404 - Page Not Found</h2>
+    <p>The page you are looking for does not exist.</p>
+  </div>
+);
+
 const App = () => {
   return (
     <div>
@@ -23,6 +31,7 @@ const App = () => {
           <Route path="/driver-dashboard" element={<DriverDashboard />} />
           <Route path="/admin-dashboard" element={<AdminDashboard />} />
           <Route path="/reports" element={<Reports />} />
+          <Route path="*" element={<NotFound />} />
         </Routes>
       </Router>
     </div>
