@@ -1,6 +1,7 @@
 ﻿# 🚀 Delivery AI System
  
 This is my Internship Work, I carried out at TheDigitalBrand.
+
 An **AI-powered Smart Delivery Management System** designed to optimize delivery routes, manage logistics efficiently, and provide real-time analytics.  
 Built using **MERN Stack (MongoDB, Express, React, Node.js)** and enhanced with **AI-based Route Optimization** for improved performance and reduced delivery costs.
 
@@ -146,5 +147,6 @@ Built as part of **Full Stack Development Internship** at **Dhemaji Engineering 
 ---
 
 > 💡 “Delivering efficiency with intelligence — that’s the future of logistics.”
+
 
 
